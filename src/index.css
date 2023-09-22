@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root{
+  --primary: rgba(6, 6, 90, 0.801);
+  --secondary: rgba(10, 28, 62, 0.76);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app{
+  min-height: 100vh;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation{
+  background-color: var(--primary);
+  padding: 15px 0px;
+}
+
+.nav-head{
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.filter{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  width: 75vw;
+  margin: auto;
+}
+
+.btn{
+  font-size: 1em;
+  padding: 0.3em 1em;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-btn{
+  color: var(--primary);
+  background-color: white;
+}
+
+.filter-btn:hover{
+  background-color: var(--primary);
+  color: white;
+  transition: all 0.2s;
+}
+
+.filter-btn-clicked{
+  background-color: var(--primary);
+  color: white;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 75vw;
+  margin: auto;
+}
+
+.container{
+  width: 300px;
+  overflow: hidden;
+  background-color: var(--primary);
+  border-radius: 5px;
+}
+
+.img-div{
+  position: relative;
+}
+
+.image{
+  width: 100%;
+  object-fit: cover;
+}
+
+.heart-btn{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  right: 2px;
+  top: 85%;
+  cursor: pointer;
+}
+
+.content-div{
+ color: white; 
+ padding: 0.5em 0.7em;
+} 
+
+.title{
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight:800;
+}
+
+.desc{
+  margin-top: 5px;
+  font-size: 15px;
 }
